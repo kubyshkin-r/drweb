@@ -1,0 +1,464 @@
+:root {
+    --project-color: #69B42E;
+    --project-color-hover: #80BF4D;
+    --project-add-text-color: #666666;
+    --project-background-color: #F2F2F2;
+}
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    line-height: 100%;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 16px;
+}
+.container {
+    max-width: 1232px;
+    margin: auto;
+    padding: 0 12px;
+}
+.logo {
+    display: block;
+    width: 170px;
+    margin: 40px auto 0;
+}
+.title {
+    margin-top: 33px;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    white-space: nowrap;
+}
+.desc {
+    margin: 12px 0 33px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--project-add-text-color);
+}
+.button-link-color {
+    display: block;
+    width: 223px;
+    margin: auto;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    background-color: var(--project-color);
+    transition: background-color 0.2s ease-out;
+    &:active {
+        background-color: var(--project-color-hover);
+    }
+}
+.button-link-color:hover {
+    background-color: var(--project-color-hover);
+}
+.android {
+    position: relative;
+    margin-top: 25px;
+}
+.android::before {
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 140px;
+    border-radius: 16px;
+    background-color: var(--project-background-color);
+}
+.android::after {
+    position: absolute;
+    content: '-20%';
+    left: calc(50% + 58px);
+    bottom: 54px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--project-color);
+}
+.android__img {
+    display: block;
+    width: 296px;
+    max-width: 100%;
+    margin: auto;
+}
+.offer {
+    margin: 24px -12px 0;
+    padding: 40px 25px 40px;
+    background-color: #1A1A1A;
+}
+.offer__subtitle {
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--project-color);
+}
+.offer__title {
+    margin-top: 32px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 118%;
+    color: #fff;
+}
+.offer__chips {
+    display: inline-block;
+    margin: 12px 6px 0 0;
+    padding: 8px 12px 6px;
+    font-size: 18px;
+    line-height: 133%;
+    font-weight: 400;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: calc(infinity * 1px);
+}
+.offer__chips:last-of-type {
+    margin-right: 0;
+}
+.offer__desc {
+    margin: 12px 0 31px;
+    line-height: 119%;
+    color: #fff;
+    /* можно без него, но я возьму на себя смелость добавить сюда, чтоб на последней строчке слово сирота не оставалось */
+    text-wrap: pretty;
+}
+.offer__link {
+    line-height: 112%;
+    color: var(--project-color);
+    transition: color 0.2s;
+    &:active {
+        color: var(--project-color-hover);
+    }
+}
+.offer__link:hover {
+    color: var(--project-color-hover);
+}
+.purchase {
+    margin: 41px -13px 0;
+    padding: 226px 32px 40px;
+    border-radius: 10px;
+    background: #fff url(img/security-space.svg) no-repeat center 41px;
+}
+.purchase__title {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+}
+.purchase__desc {
+    margin-top: 8px;
+    line-height: 119%;
+    color: var(--project-add-text-color);
+}
+.purchase__price {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    font-size: 32px;
+    line-height: 113%;
+    font-weight: 700;
+}
+.purchase__price-sale {
+    flex: 1 1 50%;
+    font-size: 18px;
+    line-height: 133%;
+    font-weight: 600;
+    text-decoration: line-through;
+    color: #B3B3B3;
+}
+.purchase__price-taxes {
+    flex: 1 1 50%;
+    font-size: 14px;
+    line-height: 128%;
+    font-weight: 400;
+    text-align: right;
+}
+.offer__btn {
+    width: 100%;
+    margin-top: 23px;
+}
+.advantages {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+.advantage {
+    height: 210px;
+    padding: 26px 24px 0;
+    border-radius: 16px;
+    background-color: var(--project-background-color);
+    background-image: url(img/phone-gamepad.webp);
+    /* вообще я видел, что изображение в мобильной версии совсем незначительн отличается, но для экономии места/кода решил использовать одно изображение везде */
+    background-repeat: no-repeat;
+    background-position: bottom 0 right 0;
+    background-size: 41%;
+}
+.protec-components {
+    background-image: url(img/gear.webp);
+    background-position: bottom -16px right -16px;
+    background-size: 46%;
+}
+.advantage__title {
+    font-size: 16px;
+    font-weight: 600;
+}
+.advantage__list {
+    margin-top: 16px;
+    font-weight: 400;
+    list-style-type: none;
+    color: var(--project-add-text-color);
+}
+.advantage__list li {
+    margin-bottom: 3px;
+}
+.footer {
+    margin-top: 48px;
+    padding: 59px 0 40px;
+    font-size: 14px;
+    color: #C6C7C8;
+    background-color: #212121;
+}
+.footer__logo {
+    width: 28px;
+    float: left;
+    margin-top: -4px;
+    margin-right: 12px;
+}
+.footer__p {
+    max-width: 450px;
+    margin-top: 10px;
+    line-height: 128%;
+    clear: both;
+}
+
+@media (min-width: 425px) {
+    .container {
+        padding: 0 16px;
+    }
+    .logo {
+        width: 267px;
+        margin-top: 48px;
+    }
+    .title {
+        margin-top: 35px;
+        font-size: clamp(20px, 6.8vw, 32px);
+    }
+    .desc {
+        margin: 13px 0 34px;
+        font-size: clamp(16px, 5vw, 24px);
+    }
+    .android {
+        margin-top: 36px;
+    }
+    .android::before {
+        height: 44vw;
+        max-height: 210px;
+        border-radius: 32px;
+    }
+    .android::after {
+        left: calc(50% + 88px);
+        bottom: 82px;
+        padding: 11px 16px;
+        font-size: clamp(24px, 7.8vw, 37px);
+        border-radius: 12px;
+    }
+    .android__img {
+        width: 455px;
+    }
+    .offer {
+        margin: 33px 0 0;
+        padding: 60px 25px 45px;
+        border-radius: 32px;
+    }
+    .purchase {
+        max-width: 368px;
+        margin: 60px auto 0;
+    }
+    .purchase__title {
+        font-size: 24px;
+    }
+    .offer__btn {
+        margin-top: 24px;
+    }
+    .advantages {
+        gap: 16px;
+        margin-top: 32px;
+    }
+    .advantage {
+        height: 328px;
+        padding: 34px 32px 0;
+        border-radius: 32px;
+        background-size: 49%;
+    }
+    .protec-components {
+        background-position: bottom -30px right -32px;
+        background-size: 56%;
+    }
+    .advantage__title {
+        font-size: 24px;
+    }
+    .footer {
+        padding: 67px 0 40px;
+    }
+    .footer__p {
+        margin-top: 14px;
+    }
+}
+@media (min-width: 650px) {
+    .advantage {
+        background-size: 303px;
+    }
+    .protec-components {
+        background-size: 346px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        padding: 0 32px;
+    }
+    .logo {
+        margin-top: 87px;
+    }
+    .title {
+        font-size: 48px;
+    }
+    .android {
+        margin-top: 66px;
+    }
+    .android::before {
+        height: 282px;
+        max-height: none;
+    }
+    .android::after {
+        left: calc(50% + 135px);
+        bottom: 102px;
+        padding: 14px 19px;
+        font-size: 46px;
+        border-radius: 22px;
+    }
+    .android__img {
+        width: 567px;
+    }
+    .offer {
+        padding: 80px 65px;
+    }
+    .offer__title {
+        font-size: 32px;
+    }
+    .offer__desc {
+        max-width: 450px;
+        margin-bottom: 32px;
+        font-size: 20px;
+        line-height: 115%;
+    }
+    .purchase {
+        margin: 80px auto 1px;
+    }
+    .purchase__title {
+        font-size: 24px;
+    }
+    .advantages {
+        flex-direction: row;
+        margin-top: 41px;
+    }
+    .advantage {
+        height: 656px;
+        flex: 1 1 50%;
+        background-size: 340px;
+    }
+    .protec-components {
+        background-position: bottom 1px right 2px;
+        background-size: 340px;
+    }
+    .footer {
+        margin-top: 64px;
+        padding: 83px 0 63px;
+    }
+    .footer__p {
+        max-width: 210px;
+        margin-top: 14px;
+    }
+}
+@media (min-width: 1024px) {
+    .logo {
+        margin-top: 104px;
+    }
+    .title {
+        margin-top: 39px;
+        font-size: clamp(48px, 7vw, 86px);
+    }
+    .desc {
+        margin: 27px 0 36px;
+        font-size: 40px;
+    }
+    .android {
+        margin-top: 62px;
+    }
+    .android__img {
+        width: clamp(800px, 85vw, 1058px);
+    }
+    .android::before {
+        height: clamp(350px, 38vw, 477px);
+    }
+    .android::after {
+        left: calc(50% + 252px);
+        bottom: 191px;
+        padding: 27px 35px;
+        font-size: clamp(50px, 6vw, 86px);
+        border-radius: 42px;
+    }
+    .offer {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        margin: 65px 13px 0;
+        padding: 80px 101px;
+    }
+    .offer__subtitle {
+        margin-top: 111px;
+    }
+    .purchase {
+        margin: 0;
+    }
+    .advantages {
+        gap: 32px;
+        margin-top: 64px;
+    }
+    .advantage {
+        height: 616px;
+        padding: 67px 64px 0
+    }
+    .advantage__title {
+        font-size: 32px;
+    }
+    .advantage__list {
+        font-size: 20px;
+    }
+    .footer {
+        margin-top: 166px;
+    }
+    .footer__p {
+        max-width: 310px;
+    }
+}
+@media (hover: none) and (pointer: coarse) {
+    .offer__link:hover {
+        color: var(--project-color);
+    }
+    .button-link-color:hover {
+        background-color: var(--project-color);
+    }
+}
